@@ -16,6 +16,16 @@
         padding-bottom: 5px;
     }
 
+    .sectionicon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .warningicon{
+        width: 35px;
+        height: 35px;
+    }
+
     .video-container {
         position: relative;
         background-color: #1e3a8a;
@@ -144,44 +154,69 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-1">
+            <div class="col-lg-1">
                 <ul class="nav flex-column sticky-top text-center">
                     <button class="btn" style="height: 30px; visibility: hidden;"></button>
                     <button class="btn btn-primary my-2">
                         <img src="img/homeicon.png" class="navicon">
-                        Home
+                        <p class="mb-0">Home</p>
                     </button>
                     <button class="btn btn-primary my-2">
                         <img src="img/forum.png" class="navicon">
-                        Forum
+                        <p class="mb-0">Forum</p>
                     </button>
                     <button class="btn btn-primary my-2">
                         <img src="img/courses.jpg" class="navicon">
-                        Courses
+                        <p class="mb-0">Course Search</p>
                     </button>
                     <button class="btn btn-primary my-2">
                         <img src="img/ai.png" class="navicon">
-                        MOM AI
+                        <p class="mb-0">MOM AI</p>
                     </button>
                     <button class="btn btn-primary my-2">
                         <img src="img/timetable.png" class="navicon">
-                        Projection
+                        <p class="mb-0">Projection</p>
                     </button>
                 </ul>
             </div>
 
             <!-- Main Content -->
-            <div class="col-md-9">
-                <div class="container-fluid">
+            <div class="col-lg-9">
+                <div class="container-fluid"> <!-- Professor Details -->
                     <p class="display-6 mb-3">CS103 - Linear Algebra for Computing Applications</p>
                     <div class="row mb-3 align-middle">
                         <div class="col-sm-4 text-center">
-                            <img src="img/manojt.jpg" class="object-fit-cover mt-2" style="width: 200px; height: 200px;">
+                            <img src="img/manojt.jpg" class="object-fit-cover mt-2"
+                                style="width: 200px; height: 200px;">
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-4">
                             <h3 class="mb-3">Professor Manoj Thulasidas</h3>
                             <h4>Forum Score: 5 / 5 ⭐⭐⭐⭐⭐</h4>
                             <a href="#" class="btn btn-secondary">Click to view forum!</a>
+                        </div>
+                        <div class="col-sm-4 border-start">
+                            <h4 class="text-center">Section & Class Timings</h4>
+                            <ul>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <li class="border-bottom">G1: Mon, 12:00 - 15:15
+                                        <img src="img/benchicon.png" title="Add to Bench" class="sectionicon ms-2 my-2">
+                                        <!-- Warning Icon -->
+                                        <img src="img/warningicon.png" title="Conflicts with current timetable" class="warningicon ms-2">
+                                    </li>
+                                </a>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <li class="border-bottom">G2: Mon, 15:00 - 18:45
+                                        <img src="img/benchicon.png" title="Add to Bench" class="sectionicon ms-2 my-2">
+                                        <img src="img/timetable.png" title="Add to Current Timetable" class="sectionicon ms-3">
+                                    </li>
+                                </a>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <li>G3: Tues, 19:00 - 22:15
+                                        <img src="img/benchicon.png" title="Add to Bench" class="sectionicon ms-2 my-2">
+                                        <img src="img/timetable.png" title="Add to Current Timetable" class="sectionicon ms-3">
+                                    </li>
+                                </a>
+                            </ul>
                         </div>
                     </div>
                 </div>
