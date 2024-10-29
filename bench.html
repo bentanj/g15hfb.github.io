@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-12 col-md-1">
+                <ul class="nav flex-column sticky-top text-center">
+                    <button class="btn" style="height: 30px; visibility: hidden;"></button>
+                    <button class="btn btn-primary my-2">
+                        <img src="img/homeicon.png" class="navicon">
+                        <p class="mb-0 d-none d-md-block">Home</p>
+                    </button>
+                    <button class="btn btn-primary my-2">
+                        <img src="img/forum.png" class="navicon">
+                        <p class="mb-0 d-none d-md-block">Forum</p>
+                    </button>
+                    <button class="btn btn-primary my-2">
+                        <img src="img/courses.jpg" class="navicon">
+                        <p class="mb-0 d-none d-md-block">Course Search</p>
+                    </button>
+                    <button class="btn btn-primary my-2">
+                        <img src="img/ai.png" class="navicon">
+                        <p class="mb-0 d-none d-md-block">MOM AI</p>
+                    </button>
+                    <button class="btn btn-primary my-2">
+                        <img src="img/timetable.png" class="navicon">
+                        <p class="mb-0 d-none d-md-block">Projection</p>
+                    </button>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-12 col-md-9">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Header with Clear All button -->
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="mb-0">Semester Projection</h4>
+                                    <button class="btn btn-danger btn-sm" id="clearTimetable">Clear Timetable</button>
+                                </div>
+
+                                <!-- Schedule Grid -->
+                                <div class="row">
+                                    <!-- Time Column -->
+                                    <div class="col-2">
+                                        <div class="text-end" style="margin-top: 48px;">
+                                            <div style="height: 48px; line-height: 48px;">8:30</div>
+                                            <div style="height: 48px; line-height: 48px;">12:00</div>
+                                            <div style="height: 48px; line-height: 48px;">15:30</div>
+                                            <div style="height: 48px; line-height: 48px;">18:45</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Days Grid -->
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <!-- Day Headers -->
+                                            <div class="col text-center"><strong>Mon</strong></div>
+                                            <div class="col text-center"><strong>Tue</strong></div>
+                                            <div class="col text-center"><strong>Wed</strong></div>
+                                            <div class="col text-center"><strong>Thu</strong></div>
+                                            <div class="col text-center"><strong>Fri</strong></div>
+                                        </div>
+                                        
+                                        <!-- Time Slots Grid -->
+                                        <div class="row mt-2" id="timetableGrid">
+                                            <div class="col">
+                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
+                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">CS101</span>
+                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
+                                                </div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
+                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS442</span>
+                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
+                                                </div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
+                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">COR3001</span>
+                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
+                                                </div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
+                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS444</span>
+                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
+                                                </div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Bench Section -->
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <!-- Header with Clear All button -->
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="mb-0">Bench</h4>
+                                    <button class="btn btn-danger btn-sm" id="clearBench">Clear Bench</button>
+                                </div>
+
+                                <!-- Bench Grid -->
+                                <div class="row" id="benchGrid">
+                                    <div class="col-12 col-sm-6 col-md bench-slot">
+                                        <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
+                                            <span class="ps-2 pt-2 d-inline-block">CS201</span>
+                                            <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md bench-slot">
+                                        <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
+                                            <span class="ps-2 pt-2 d-inline-block">IS443</span>
+                                            <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md bench-slot">
+                                        <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
+                                            <span class="ps-2 pt-2 d-inline-block">CS301</span>
+                                            <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md bench-slot">
+                                        <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md bench-slot">
+                                        <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="col-12 col-sm-6 col-md-2 mt-4 mt-md-0">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-secondary text-start">Add Mod</button>
+                    <button class="btn btn-outline-secondary text-start">Add Multiple</button>
+                    <button class="btn btn-outline-secondary text-start">Import</button>
+                    <button class="btn btn-outline-secondary text-start">Export</button>
+                    <button class="btn btn-outline-secondary text-start" id="clearAll">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
