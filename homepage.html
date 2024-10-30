@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +39,7 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
 
@@ -53,7 +54,8 @@
             width: 100%;
         }
 
-        .progress-table th, .progress-table td {
+        .progress-table th,
+        .progress-table td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
@@ -68,7 +70,8 @@
             width: 100%;
         }
 
-        .requirements-table th, .requirements-table td {
+        .requirements-table th,
+        .requirements-table td {
             border: 1px solid #ddd;
             padding: 8px;
         }
@@ -77,7 +80,7 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 100%;
             box-sizing: border-box;
         }
@@ -87,7 +90,8 @@
             border-collapse: collapse;
         }
 
-        .timetable th, .timetable td {
+        .timetable th,
+        .timetable td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
@@ -110,39 +114,48 @@
             background-color: #ffeb3b50;
         }
 
-        .progress-table th:first-child, .progress-table th:nth-child(2) {
+        .progress-table th:first-child,
+        .progress-table th:nth-child(2) {
             width: 50px;
         }
 
         .progress-table td:not(:first-child):not(:nth-child(2)) {
-            width: 100px; /* Set this to your preferred width */
+            width: 100px;
+            /* Set this to your preferred width */
             height: 70px;
         }
-        
+
         .timetable .firsthalf {
             border-bottom: 2px dashed #ccc;
         }
 
-        .progress-section, .timetable-section {
+        .progress-section,
+        .timetable-section {
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
-        .progress-table, .requirements-table, .timetable {
+
+        .progress-table,
+        .requirements-table,
+        .timetable {
             border-collapse: collapse;
             width: 100%;
         }
+
         .navicon {
             height: 50px;
             width: 50px;
             padding-bottom: 5px;
         }
+
         .sectionicon {
             width: 25px;
             height: 25px;
         }
+
         .warningicon {
             width: 35px;
             height: 35px;
@@ -151,9 +164,9 @@
         th {
             text-align: center;
         }
-        
     </style>
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -276,21 +289,27 @@
                                 <div class="row">
                                     <table class="requirements-table">
                                         <tr>
-                                            <th colspan="2">Capabilities: 3/6 CUs</th>
+                                            <th>Current Progress (min 36 CUs):</th>
+                                            <th style="width: 100px; text-align: center;">13/36</th>
+                                        </tr>
+                                        <!-- Uni Core Capabilities  -->
+                                        <tr>
+                                            <th>Uni Core Capabilities (6 CUs):</th>
+                                            <th style="width: 100px; text-align: center;">3/6</th>
                                         </tr>
                                         <tr>
                                             <td>Managing</td>
                                             <td style="width: 100px; text-align: center;">0/2</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-warning fw-bold">
                                             <td>Modes of Thinking</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-success fw-bold">
                                             <td>Numeracy</td>
                                             <td style="width: 100px; text-align: center;">1/1</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-success fw-bold">
                                             <td>Writing</td>
                                             <td style="width: 100px; text-align: center;">1/1</td>
                                         </tr>
@@ -298,10 +317,16 @@
                                             <td>Internship</td>
                                             <td style="width: 100px; text-align: center;">0/1</td>
                                         </tr>
+                                        <!-- Uni Core Communities  -->
                                         <tr>
-                                            <th colspan="2">Communities: 2/4 CUs</th>
+                                            <th>Uni Core Communities (4 CUs)</th>
+                                            <th style="width: 100px; text-align: center;">2/4</th>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-success fw-bold">
+                                            <td>Economics and Society</td>
+                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                        </tr>
+                                        <tr class="text-success fw-bold">
                                             <td>Technology</td>
                                             <td style="width: 100px; text-align: center;">1/1</td>
                                         </tr>
@@ -314,13 +339,79 @@
                                             <td style="width: 100px; text-align: center;">0/1</td>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">IS Major Core: 7/12 CUs</th>
+                                            <!-- Uni Core Communities  -->
+                                        <tr>
+                                            <th>Uni Core Civilisation (2 CUs)</th>
+                                            <th style="width: 100px; text-align: center;">1/2</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">IS Major Electives: 0/6 CUs</th>
+                                            <td>Ethics and Social Responsibility</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr class="text-success fw-bold">
+                                            <td>Big Questions</td>
+                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                        </tr>
+                                        <!-- IS Major Core -->
+                                        <tr>
+                                            <th>IS Major Core (12 CUs)</th>
+                                            <th style="width: 100px; text-align: center;">4/12</th>
+                                        </tr>
+                                        <tr class="text-success fw-bold">
+                                            <td>IS111 - Introduction to Programming</td>
+                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                        </tr>
+                                        <tr class="text-success fw-bold">
+                                            <td>IS112 - Data Management</td>
+                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                        </tr>
+                                        <tr class="text-success fw-bold">
+                                            <td>IS113 - Web Application Development 1</td>
+                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                        </tr>
+                                        <tr class="text-success fw-bold">
+                                            <td>IS114 - Computing Fundamentals</td>
+                                            <td style="width: 100px; text-align: center;">1/1</td>
+                                        </tr>
+                                        <tr class="text-warning fw-medium">
+                                            <td>IS216 - Web Application Development 2</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr class="text-warning fw-medium">
+                                            <td>IS210 - Business Process Analysis and Solutioning</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr class="text-warning fw-medium">
+                                            <td>IS211 - Interaction Design & Prototyping</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">Free Electives: 3/6 CUs</th>
+                                            <td>IS213 - Enterprise Solution Development</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IS214 - Enterprise Solution Management</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IS215 - Digital Business Technology & Transformation</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IS212 - Software Project Management</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IS Project Experience - (IS483/484/485)</td>
+                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                        </tr>
+                                        <tr>
+                                            <th>IS Major Electives (6 CUs)</th>
+                                            <th style="width: 100px; text-align: center;">0/6</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Free Electives (6 CUs)</th>
+                                            <th style="width: 100px; text-align: center;">3/6</th>
                                         </tr>
                                     </table>
                                 </div>
@@ -501,4 +592,5 @@
         </div>
     </div>
 </body>
+
 </html>
