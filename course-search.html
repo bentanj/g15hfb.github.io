@@ -1,355 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Previous head content remains the same until the style section -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course Search</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      /* Previous styles remain the same */
-      body {
-        background-color: white;
-      }
-      .navicon {
-        height: 50px;
-        width: 50px;
-        padding-bottom: 5px;
-      }
-      .course-container {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-      }
-      .course-row {
-        padding: 15px;
-        margin: 5px 0;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .course-row:nth-child(odd) {
-        background-color: #f8f9fa;
-      }
-      .course-row:nth-child(even) {
-        background-color: #e9ecef;
-      }
-      .dropdown-content {
-        display: none;
-        padding: 15px;
-        background-color: white;
-        border-radius: 4px;
-        margin-top: 10px;
-      }
-      .arrow-icon {
-        color: #007bff;
-        margin-right: 10px;
-        transition: transform 0.3s;
-      }
-      .rotated {
-        transform: rotate(90deg);
-      }
-      .search-container {
-        margin-bottom: 20px;
-      }
-      .filter-container {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-      .none-text {
-        color: #6c757d;
-        font-style: italic;
-      }
-      .dropdown-item.disabled {
-        color: #6c757d;
-        pointer-events: none;
-        background-color: transparent;
-      }
-      .dropdown-item.active {
-        background-color: #007bff;
-        color: white;
-      }
-      .requirement-pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 5px 15px;
-        margin: 5px;
-        border-radius: 20px;
-        color: white;
-      }
-      .requirement-pill.cleared {
-        background-color: #28a745;
-      }
-      .requirement-pill.not-cleared {
-        background-color: #dc3545;
-      }
-      .warning-icon {
-        height: 20px; /* Increased from 20px to 35px */
-        margin-left: 10px;
-        vertical-align: middle;
-      }
-      .status-icon {
-        margin-left: 5px;
-        font-weight: bold;
-      }
-      .cleared .status-icon {
-        color: #28a745;
-      }
-      .not-cleared .status-icon {
-        color: white; /* Changed from red to white for better visibility */
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Added shadow for better contrast */
-      }
-    </style>
-  </head>
-  <!-- Rest of the HTML content remains exactly the same -->
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Sidebar Section -->
-        <div class="col-lg-1">
-          <ul class="nav flex-column sticky-top text-center">
-            <button
-              class="btn"
-              style="height: 30px; visibility: hidden"
-            ></button>
-            <button class="btn btn-primary my-2">
-              <img src="img/homeicon.png" class="navicon" />
-              <p class="mb-0">Home</p>
-            </button>
-            <button class="btn btn-primary my-2">
-              <img src="img/forum.png" class="navicon" />
-              <p class="mb-0">Forum</p>
-            </button>
-            <button class="btn btn-primary my-2">
-              <img src="img/courses.jpg" class="navicon" />
-              <p class="mb-0">Course Search</p>
-            </button>
-            <button class="btn btn-primary my-2">
-              <img src="img/ai.png" class="navicon" />
-              <p class="mb-0">MOM AI</p>
-            </button>
-            <button class="btn btn-primary my-2">
-              <img src="img/timetable.png" class="navicon" />
-              <p class="mb-0">Projection</p>
-            </button>
-          </ul>
-        </div>
+<!-- Previous head content remains the same until the style section -->
 
-        <!-- Main Content -->
-        <div class="col-lg-11">
-          <div class="course-container">
-            <div class="search-container">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search courses..."
-              />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map Our Modules | Course Search</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    /* Previous styles remain the same */
+    body {
+      background-color: white;
+    }
+
+    .navicon {
+      height: 50px;
+      width: 50px;
+      padding-bottom: 5px;
+    }
+
+    .course-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .course-row {
+      padding: 15px;
+      margin: 5px 0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .course-row:nth-child(odd) {
+      background-color: #f8f9fa;
+    }
+
+    .course-row:nth-child(even) {
+      background-color: #e9ecef;
+    }
+
+    .dropdown-content {
+      display: none;
+      padding: 15px;
+      background-color: white;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .arrow-icon {
+      color: #007bff;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+
+    .rotated {
+      transform: rotate(90deg);
+    }
+
+    .search-container {
+      margin-bottom: 20px;
+    }
+
+    .filter-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .none-text {
+      color: #6c757d;
+      font-style: italic;
+    }
+
+    .dropdown-item.disabled {
+      color: #6c757d;
+      pointer-events: none;
+      background-color: transparent;
+    }
+
+    .dropdown-item.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .requirement-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 15px;
+      margin: 5px;
+      border-radius: 20px;
+      color: white;
+    }
+
+    .requirement-pill.cleared {
+      background-color: #28a745;
+    }
+
+    .requirement-pill.not-cleared {
+      background-color: #dc3545;
+    }
+
+    .warning-icon {
+      height: 20px;
+      /* Increased from 20px to 35px */
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .status-icon {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    .cleared .status-icon {
+      color: #28a745;
+    }
+
+    .not-cleared .status-icon {
+      color: white;
+      /* Changed from red to white for better visibility */
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      /* Added shadow for better contrast */
+    }
+  </style>
+</head>
+<!-- Rest of the HTML content remains exactly the same -->
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar Section -->
+      <div class="col-lg-1">
+        <ul class="nav flex-column sticky-top text-center">
+          <button class="btn" style="height: 30px; visibility: hidden;"></button>
+          <button class="btn btn-primary my-2" onClick="location.href = 'homepage.html'">
+            <img src="img/homeicon.png" class="navicon">
+            <p class="mb-0">Home</p>
+          </button>
+          <button class="btn btn-primary my-2" onClick="location.href = 'forum.html'">
+            <img src="img/forum.png" class="navicon">
+            <p class="mb-0">Forum</p>
+          </button>
+          <button class="btn btn-primary my-2" onClick="location.href = 'course-search.html'">
+            <img src="img/courses.jpg" class="navicon">
+            <p class="mb-0">Course Search</p>
+          </button>
+          <button class="btn btn-primary my-2">
+            <img src="img/ai.png" class="navicon">
+            <p class="mb-0">MOM AI</p>
+          </button>
+          <button class="btn btn-primary my-2" onClick="location.href = 'bench.html'">
+            <img src="img/timetable.png" class="navicon">
+            <p class="mb-0">Projection</p>
+          </button>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-lg-11">
+        <div class="course-container">
+          <h1 class="display-5">Course Search</h1>
+          <div class="search-container">
+            <input type="text" class="form-control" placeholder="Search courses..." />
+          </div>
+          <div class="filter-container">
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="schoolsDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" style="width:100px;">
+                Schools
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="schoolsDropdown">
+                <li><a class="dropdown-item active" href="course-search(SCIS Filter).html">SCIS</a></li>
+                <li><a class="dropdown-item" href="#">SOE</a></li>
+                <li><a class="dropdown-item" href="#">SOB</a></li>
+                <li><a class="dropdown-item" href="#">SOA</a></li>
+                <li><a class="dropdown-item" href="#">SOSS</a></li>
+              </ul>
             </div>
-            <div class="filter-container">
-              <div class="dropdown">
-                <button
-                  class="btn btn-primary dropdown-toggle"
-                  type="button"
-                  id="schoolsDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Schools
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="schoolsDropdown">
-                  <li><a class="dropdown-item active" href="#">SCIS</a></li>
-                  <li><a class="dropdown-item disabled" href="#">SOE</a></li>
-                  <li><a class="dropdown-item disabled" href="#">SOB</a></li>
-                  <li><a class="dropdown-item disabled" href="#">SOA</a></li>
-                  <li><a class="dropdown-item disabled" href="#">SOSS</a></li>
-                </ul>
-              </div>
-              <div class="dropdown">
-                <button
-                  class="btn btn-primary dropdown-toggle"
-                  type="button"
-                  id="majorsDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Majors
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="majorsDropdown">
-                  <li><a class="dropdown-item" href="#">Major 1</a></li>
-                  <li><a class="dropdown-item" href="#">Major 2</a></li>
-                  <li><a class="dropdown-item" href="#">Major 3</a></li>
-                </ul>
-              </div>
-              <div class="dropdown">
-                <button
-                  class="btn btn-primary dropdown-toggle"
-                  type="button"
-                  id="basketsDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Baskets
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="basketsDropdown">
-                  <li><a class="dropdown-item" href="#">Basket 1</a></li>
-                  <li><a class="dropdown-item" href="#">Basket 2</a></li>
-                  <li><a class="dropdown-item" href="#">Basket 3</a></li>
-                </ul>
-              </div>
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="majorsDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" style="width:100px;">
+                Majors
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="majorsDropdown">
+                <li><a class="dropdown-item" href="#">Major 1</a></li>
+                <li><a class="dropdown-item" href="#">Major 2</a></li>
+                <li><a class="dropdown-item" href="#">Major 3</a></li>
+              </ul>
             </div>
-
-            <h2>Current Available Courses</h2>
-            <div class="courses-list">
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                COR 1001: Internship
-                <span class="float-end">
-                  <span>Term 1: Yes</span>
-                  <span class="ms-3">Term 2: No</span>
-                </span>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                COR 1201: Calculus
-                <span class="float-end">
-                  <span>Term 1: Yes</span>
-                  <span class="ms-3">Term 2: Yes</span>
-                </span>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                COR 1701: Critical Thinking In The Real World
-                <span class="float-end">
-                  <span>Term 1: Yes</span>
-                  <span class="ms-3">Term 2: No</span>
-                </span>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                CS 103: Introduction to Computing
-                <span class="float-end">
-                  <span>Term 1: Yes</span>
-                  <span class="ms-3">Term 2: Yes</span>
-                </span>
-                <div class="dropdown-content">
-                  <div>
-                    <h5>Prerequisites:</h5>
-                    <span class="none-text">None</span>
-                  </div>
-                  <div class="mt-3">
-                    <h5>Co-Requirements:</h5>
-                    <span class="none-text">None</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                CS 426: Agent-Based Modeling And Simulation
-                <span class="float-end">
-                  <span>Term 1: No</span>
-                  <span class="ms-3">Term 2: Yes</span>
-                </span>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                CS 472: Guided Advanced Research In Computer
-                <span class="float-end">
-                  <span>Term 1: No</span>
-                  <span class="ms-3">Term 2: Yes</span>
-                </span>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                IS 217: Analytics Foundations
-                <img
-                  src="img/warningicon.png"
-                  class="warning-icon"
-                  alt="Warning"
-                />
-                <span class="float-end">
-                  <span>Term 1: Yes</span>
-                  <span class="ms-3">Term 2: Yes</span>
-                </span>
-                <div class="dropdown-content">
-                  <div>
-                    <h5>Prerequisites:</h5>
-                    <span class="requirement-pill cleared">
-                      IS 111 Cleared
-                      <span class="status-icon">✓</span>
-                    </span>
-                    <span class="requirement-pill cleared">
-                      SMT 111 Cleared
-                      <span class="status-icon">✓</span>
-                    </span>
-                    <span class="requirement-pill not-cleared">
-                      CS 101 Not Cleared
-                      <span class="status-icon">✗</span>
-                    </span>
-                  </div>
-                  <div class="mt-3">
-                    <h5>Co-Requirements:</h5>
-                    <span class="requirement-pill not-cleared">
-                      STAT 101 Not Cleared
-                      <span class="status-icon">✗</span>
-                    </span>
-                    <span class="requirement-pill not-cleared">
-                      CS 105 Not Cleared
-                      <span class="status-icon">✗</span>
-                    </span>
-                    <span class="requirement-pill not-cleared">
-                      COR-STAT 1202 Not Cleared
-                      <span class="status-icon">✗</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="course-row" onclick="toggleDropdown(this)">
-                <i class="fas fa-chevron-right arrow-icon"></i>
-                COR 1703: Managing In A Volatile, Uncertain, Complex And
-                Ambiguous Context
-                <span class="float-end">
-                  <span>Term 1: Yes</span>
-                  <span class="ms-3">Term 2: No</span>
-                </span>
-              </div>
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="basketsDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" style="width:100px;">
+                Baskets
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="basketsDropdown">
+                <li><a class="dropdown-item" href="#">Basket 1</a></li>
+                <li><a class="dropdown-item" href="#">Basket 2</a></li>
+                <li><a class="dropdown-item" href="#">Basket 3</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function toggleDropdown(element) {
-        const dropdownContent = element.querySelector(".dropdown-content");
-        const arrow = element.querySelector(".arrow-icon");
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleDropdown(element) {
+      const dropdownContent = element.querySelector(".dropdown-content");
+      const arrow = element.querySelector(".arrow-icon");
 
-        if (dropdownContent) {
-          if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-            arrow.classList.remove("rotated");
-          } else {
-            dropdownContent.style.display = "block";
-            arrow.classList.add("rotated");
-          }
+      if (dropdownContent) {
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          arrow.classList.remove("rotated");
+        } else {
+          dropdownContent.style.display = "block";
+          arrow.classList.add("rotated");
         }
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>
