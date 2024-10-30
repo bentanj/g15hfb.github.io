@@ -125,7 +125,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .timetable-section {
             background: white;
             padding: 20px;
@@ -513,177 +513,102 @@
                         </div>
                     </div>
 
-                    <div class="timetable-section">
-                        <div class="mb-2 row">
-                            <h2 class="col-2 ms-2">My Timetable</h2>
-                            <button class="btn btn-outline-primary col-2 align-center" onClick="location.href='homepage(nextSemester).html'">Next Semester Forecast</button>
-                        </div>
-                        <table class="timetable">
-                            <tr>
-                                <th></th>
-                                <th>MON</th>
-                                <th>TUE</th>
-                                <th>WED</th>
-                                <th>THU</th>
-                                <th>FRI</th>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">08:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="highlighted" rowspan="6">IS210</td>
-                                <td class="highlighted" rowspan="6">COR-IS1702</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">09:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">10:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">11:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">12:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="highlighted" rowspan="6">IS216</td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">13:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">14:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">15:00</td>
-                                <td class="firsthalf"></td>
-                                <td class=""></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class="highlighted" rowspan="6">IS211</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">16:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">17:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td rowspan="2">18:00</td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                                <td class="firsthalf"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
+                    <div class="timetable-section" id="timetable-section">
+                    <div class="mb-2 row">
+                        <h2 class="col-2 ms-2">My Timetable</h2>
+                        <button class="btn btn-outline-primary col-2 align-center" onClick="location.href='homepage(nextSemester).html#timetable-section'">Next Semester Forecast</button>
                     </div>
+                    <table class="timetable">
+                        <tr>
+                            <th>Time</th>
+                            <th>MON</th>
+                            <th>TUE</th>
+                            <th>WED</th>
+                            <th>THU</th>
+                            <th>FRI</th>
+                        </tr>
+                        <tr>
+                            <td>08:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="highlighted" rowspan="3">IS210</td>
+                            <td class="highlighted" rowspan="3">COR-IS1702</td>
+                        </tr>
+                        <tr>
+                            <td>09:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="highlighted" rowspan="3">IS216</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15:00</td>
+                            <td></td>
+                            <td class="highlighted" rowspan="3">IS211</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>16:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>17:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>18:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
                 </div>
             </div>
         </div>
@@ -702,6 +627,17 @@
                 content.style.display = 'none';
             }
         });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                // Scroll to the element without smooth scrolling
+                element.scrollIntoView({ behavior: "auto" });
+            }
+        }
     });
 </script>
 
