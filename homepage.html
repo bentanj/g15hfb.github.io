@@ -7,6 +7,7 @@
     <title>Map Our Modules | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .remainder {
@@ -77,6 +78,54 @@
             padding: 8px;
         }
 
+        .btn-link {
+            text-decoration: none;
+            color: #666;
+        }
+        
+        .btn-link:hover {
+            color: #333;
+        }
+        
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 0; /* Adjust as needed */
+            position: relative;
+            top: -75px; /* Move upwards to align with the requirements table */
+        }
+        
+        .requirements-table th {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        
+        .requirements-table td:first-child {
+            padding-left: 1rem;
+        }
+        
+        /* Rotate icon when collapsed content is shown */
+        .collapse.show + tr th .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+        
+        .requirements-table {
+            width: 100%;
+            position: relative;
+            top: -73.75px; /* Move upwards to align with the requirements table */
+        }
+
+        .requirements-table .btn {
+            float: right;
+            text-align: right;
+        }
+        
+        /* Ensure progress card stays on top */
+        .card {
+            position: relative;
+            z-index: 1;
+        }
+        
         .timetable-section {
             background: white;
             padding: 20px;
@@ -207,113 +256,125 @@
                             <p>1st Major: Product Development</p>
                             <p>2nd Major: N/A</p>
                         </div>
-                        <div class="grid-container">
-                            <div>
-                                <table class="progress-table">
-                                    <tr>
-                                        <th rowspan="2">Y1</th>
-                                        <th>T1</th>
-                                        <td>COR-STAT1202</td>
-                                        <td>COR2221</td>
-                                        <td>IS111</td>
-                                        <td>IS114</td>
-                                        <td></td>
-                                        <td><span style="visibility: hidden">Test</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th>T2</th>
-                                        <td>IS112</td>
-                                        <td>IS113</td>
-                                        <td>COR1100</td>
-                                        <td>COR2100</td>
-                                        <td>COR3001</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th class="highlighted" rowspan="2">Y2</th>
-                                        <th class="highlighted">T1</th>
-                                        <td class="highlighted">IS210</td>
-                                        <td class="highlighted">IS211</td>
-                                        <td class="highlighted">IS216</td>
-                                        <td class="highlighted">COR-IS1702</td>
-                                        <td class="highlighted"></td>
-                                        <td class="highlighted"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>T2</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th rowspan="2">Y3</th>
-                                        <th>T1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th>T2</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th rowspan="2">Y4</th>
-                                        <th>T1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th>T2</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="row">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <table class="progress-table mb-4">
+                                        <!-- Your existing progress table content -->
+                                        <tr>
+                                            <th rowspan="2">Y1</th>
+                                            <th>T1</th>
+                                            <td>COR-STAT1202</td>
+                                            <td>COR2221</td>
+                                            <td>IS111</td>
+                                            <td>IS114</td>
+                                            <td></td>
+                                            <td><span style="visibility: hidden">Test</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>T2</th>
+                                            <td>IS112</td>
+                                            <td>IS113</td>
+                                            <td>COR1100</td>
+                                            <td>COR2100</td>
+                                            <td>COR3001</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="highlighted" rowspan="2">Y2</th>
+                                            <th class="highlighted">T1</th>
+                                            <td class="highlighted">IS210</td>
+                                            <td class="highlighted">IS211</td>
+                                            <td class="highlighted">IS216</td>
+                                            <td class="highlighted">COR-IS1702</td>
+                                            <td class="highlighted"></td>
+                                            <td class="highlighted"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>T2</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="2">Y3</th>
+                                            <th>T1</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>T2</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="2">Y4</th>
+                                            <th>T1</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>T2</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <div class="d-flex flex-column col-lg-4">
+                                    <!-- Progress Card -->
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center mb-0">Current Progress: 13/36 CUs</h5>
+                                        </div>
+                                    </div>
+                        
+                                    <!-- Requirements Table -->
                                     <table class="requirements-table">
+                                        <!-- Capabilities Section -->
                                         <tr>
-                                            <th>Current Progress (min 36 CUs):</th>
-                                            <th style="width: 100px; text-align: center;">13/36</th>
+                                            <th colspan="2">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <span class="me-2">Uni Core (Capabilities): 3/6 CUs</span>
+                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#capabilitiesCollapse" aria-expanded="false">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                </div>
+                                            </th>
                                         </tr>
-                                        <!-- Uni Core Capabilities  -->
-                                        <tr>
-                                            <th>Uni Core Capabilities (6 CUs):</th>
-                                            <th style="width: 100px; text-align: center;">3/6</th>
-                                        </tr>
-                                        <tbody class="collapse show" id="capabilitiesCollapse">
+                                        <tbody id="capabilitiesCollapse" class="collapse">
                                             <tr>
                                                 <td>Managing</td>
                                                 <td style="width: 100px; text-align: center;">0/2</td>
                                             </tr>
-                                            <tr>
+                                            <tr class="text-warning fw-bold">
                                                 <td>Modes of Thinking</td>
-                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
                                             </tr>
-                                            <tr>
+                                            <tr class="text-success fw-bold">
                                                 <td>Numeracy</td>
                                                 <td style="width: 100px; text-align: center;">1/1</td>
                                             </tr>
-                                            <tr>
+                                            <tr class="text-success fw-bold">
                                                 <td>Writing</td>
                                                 <td style="width: 100px; text-align: center;">1/1</td>
                                             </tr>
@@ -322,49 +383,24 @@
                                                 <td style="width: 100px; text-align: center;">0/1</td>
                                             </tr>
                                         </tbody>
+                        
+                                        <!-- Communities Section -->
                                         <tr>
-                                            <td>Managing</td>
-                                            <td style="width: 100px; text-align: center;">0/2</td>
+                                            <th colspan="2">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <span class="me-2">Uni Core (Communities): 2/4 CUs</span>
+                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#communitiesCollapse" aria-expanded="false">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                </div>
+                                            </th>
                                         </tr>
-                                        <tr class="text-warning fw-bold">
-                                            <td>Modes of Thinking</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>Numeracy</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>Writing</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Internship</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <!-- Uni Core Communities  -->
-                                        <tr>
-                                            <th>Uni Core Communities (4 CUs)</th>
-                                            <th style="width: 100px; text-align: center;">2/4</th>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>Economics and Society</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>Technology</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cultures</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Community Service</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tbody class="collapse show" id="communitiesCollapse">
-                                            <tr>
+                                        <tbody id="communitiesCollapse" class="collapse">
+                                            <tr class="text-success fw-bold">
+                                                <td>Economics and Society</td>
+                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                            </tr>
+                                            <tr class="text-success fw-bold">
                                                 <td>Technology</td>
                                                 <td style="width: 100px; text-align: center;">1/1</td>
                                             </tr>
@@ -377,80 +413,99 @@
                                                 <td style="width: 100px; text-align: center;">0/1</td>
                                             </tr>
                                         </tbody>
+                        
+                                        <!-- Civilisation Section -->
                                         <tr>
-                                            <!-- Uni Core Communities  -->
+                                            <th colspan="2">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <span class="me-2">Uni Core (Civilisation): 1/2 CUs</span>
+                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#civilisationCollapse" aria-expanded="false">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tbody id="civilisationCollapse" class="collapse">
+                                            <tr>
+                                                <td>Ethics and Social Responsibility</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr class="text-success fw-bold">
+                                                <td>Big Questions</td>
+                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                            </tr>
+                                        </tbody>
+                        
+                                        <!-- IS Major Core Section -->
                                         <tr>
-                                            <th>Uni Core Civilisation (2 CUs)</th>
-                                            <th style="width: 100px; text-align: center;">1/2</th>
+                                            <th colspan="2">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <span class="me-2">IS Major Core: 4/12 CUs</span>
+                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#majorCollapse" aria-expanded="false">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                </div>
+                                            </th>
                                         </tr>
+                                        <tbody id="majorCollapse" class="collapse">
+                                            <tr class="text-success fw-bold">
+                                                <td>IS111 - Introduction to Programming</td>
+                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                            </tr>
+                                            <tr class="text-success fw-bold">
+                                                <td>IS112 - Data Management</td>
+                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                            </tr>
+                                            <tr class="text-success fw-bold">
+                                                <td>IS113 - Web Application Development 1</td>
+                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                            </tr>
+                                            <tr class="text-success fw-bold">
+                                                <td>IS114 - Computing Fundamentals</td>
+                                                <td style="width: 100px; text-align: center;">1/1</td>
+                                            </tr>
+                                            <tr class="text-warning fw-medium">
+                                                <td>IS216 - Web Application Development 2</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr class="text-warning fw-medium">
+                                                <td>IS210 - Business Process Analysis and Solutioning</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr class="text-warning fw-medium">
+                                                <td>IS211 - Interaction Design & Prototyping</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IS213 - Enterprise Solution Development</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IS214 - Enterprise Solution Management</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IS215 - Digital Business Technology & Transformation</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IS212 - Software Project Management</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IS Project Experience - (IS483/484/485)</td>
+                                                <td style="width: 100px; text-align: center;">0/1</td>
+                                            </tr>
+                                        </tbody>
+                        
+                                        <!-- Major Electives Section -->
                                         <tr>
-                                            <td>Ethics and Social Responsibility</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
+                                            <th colspan="2" class="text-center">IS Major Electives: 0/6 CUs</th>
                                         </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>Big Questions</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <!-- IS Major Core -->
+                        
+                                        <!-- Free Electives Section -->
                                         <tr>
-                                            <th>IS Major Core (12 CUs)</th>
-                                            <th style="width: 100px; text-align: center;">4/12</th>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>IS111 - Introduction to Programming</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>IS112 - Data Management</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>IS113 - Web Application Development 1</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr class="text-success fw-bold">
-                                            <td>IS114 - Computing Fundamentals</td>
-                                            <td style="width: 100px; text-align: center;">1/1</td>
-                                        </tr>
-                                        <tr class="text-warning fw-medium">
-                                            <td>IS216 - Web Application Development 2</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr class="text-warning fw-medium">
-                                            <td>IS210 - Business Process Analysis and Solutioning</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr class="text-warning fw-medium">
-                                            <td>IS211 - Interaction Design & Prototyping</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>IS213 - Enterprise Solution Development</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>IS214 - Enterprise Solution Management</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>IS215 - Digital Business Technology & Transformation</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>IS212 - Software Project Management</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>IS Project Experience - (IS483/484/485)</td>
-                                            <td style="width: 100px; text-align: center;">0/1</td>
-                                        </tr>
-                                        <tr>
-                                            <th>IS Major Electives (6 CUs)</th>
-                                            <th style="width: 100px; text-align: center;">0/6</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Free Electives (6 CUs)</th>
-                                            <th style="width: 100px; text-align: center;">3/6</th>
+                                            <th colspan="2" class="text-center">Free Electives: 3/6 CUs</th>
                                         </tr>
                                     </table>
                                 </div>
@@ -634,6 +689,22 @@
         </div>
     </div>
 </body>
+
+
+
+<script>
+    document.querySelectorAll('.requirement-section').forEach(section => {
+        section.addEventListener('click', () => {
+            const content = section.querySelector('.collapse');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        });
+    });
+</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
