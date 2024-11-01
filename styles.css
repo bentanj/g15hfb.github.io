@@ -9,6 +9,10 @@
     height: 25px;
 }
 
+.sectionicon:hover{
+    cursor: pointer;
+}
+
 .warningicon {
     width: 35px;
     height: 35px;
