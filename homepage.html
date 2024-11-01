@@ -82,44 +82,47 @@
             text-decoration: none;
             color: #666;
         }
-        
+
         .btn-link:hover {
             color: #333;
         }
-        
+
         .card {
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 0; /* Adjust as needed */
+            margin-top: 0;
+            /* Adjust as needed */
             position: relative;
-            top: -75px; /* Move upwards to align with the requirements table */
+            top: -75px;
+            /* Move upwards to align with the requirements table */
         }
-        
+
         .requirements-table th {
             background-color: #f8f9fa;
             text-align: center;
         }
-        
+
         .requirements-table td:first-child {
             padding-left: 1rem;
         }
-        
+
         /* Rotate icon when collapsed content is shown */
-        .collapse.show + tr th .fa-chevron-down {
+        .collapse.show+tr th .fa-chevron-down {
             transform: rotate(180deg);
         }
-        
+
         .requirements-table {
             width: 100%;
             position: relative;
-            top: -73.75px; /* Move upwards to align with the requirements table */
+            top: -73.75px;
+            /* Move upwards to align with the requirements table */
         }
 
         .requirements-table .btn {
             float: right;
             text-align: right;
         }
-        
+
         /* Ensure progress card stays on top */
         .card {
             position: relative;
@@ -246,7 +249,7 @@
                     </button>
                 </ul>
             </div>
-            
+
             <div class="container-fluid col-lg-11">
                 <h1 class="display-5">Map Our Modules!</h1>
                 <div class="row remainder">
@@ -339,7 +342,7 @@
                                         </tr>
                                     </table>
                                 </div>
-                                
+
                                 <div class="d-flex flex-column col-lg-4">
                                     <!-- Progress Card -->
                                     <div class="card mb-3">
@@ -347,7 +350,7 @@
                                             <h5 class="card-title text-center mb-0">Current Progress: 13/36 CUs</h5>
                                         </div>
                                     </div>
-                        
+
                                     <!-- Requirements Table -->
                                     <table class="requirements-table">
                                         <!-- Capabilities Section -->
@@ -355,7 +358,9 @@
                                             <th colspan="2">
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <span class="me-2">Uni Core (Capabilities): 3/6 CUs</span>
-                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#capabilitiesCollapse" aria-expanded="false">
+                                                    <button class="btn btn-link p-0" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#capabilitiesCollapse"
+                                                        aria-expanded="false" aria-controls="capabilitiesCollapse">
                                                         <i class="fas fa-chevron-down"></i>
                                                     </button>
                                                 </div>
@@ -383,13 +388,15 @@
                                                 <td style="width: 100px; text-align: center;">0/1</td>
                                             </tr>
                                         </tbody>
-                        
+
                                         <!-- Communities Section -->
                                         <tr>
                                             <th colspan="2">
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <span class="me-2">Uni Core (Communities): 2/4 CUs</span>
-                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#communitiesCollapse" aria-expanded="false">
+                                                    <button class="btn btn-link p-0" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#communitiesCollapse"
+                                                        aria-expanded="false">
                                                         <i class="fas fa-chevron-down"></i>
                                                     </button>
                                                 </div>
@@ -413,13 +420,15 @@
                                                 <td style="width: 100px; text-align: center;">0/1</td>
                                             </tr>
                                         </tbody>
-                        
+
                                         <!-- Civilisation Section -->
                                         <tr>
                                             <th colspan="2">
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <span class="me-2">Uni Core (Civilisation): 1/2 CUs</span>
-                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#civilisationCollapse" aria-expanded="false">
+                                                    <button class="btn btn-link p-0" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#civilisationCollapse"
+                                                        aria-expanded="false">
                                                         <i class="fas fa-chevron-down"></i>
                                                     </button>
                                                 </div>
@@ -435,13 +444,15 @@
                                                 <td style="width: 100px; text-align: center;">1/1</td>
                                             </tr>
                                         </tbody>
-                        
+
                                         <!-- IS Major Core Section -->
                                         <tr>
                                             <th colspan="2">
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <span class="me-2">IS Major Core: 4/12 CUs</span>
-                                                    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#majorCollapse" aria-expanded="false">
+                                                    <button class="btn btn-link p-0" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#majorCollapse"
+                                                        aria-expanded="false">
                                                         <i class="fas fa-chevron-down"></i>
                                                     </button>
                                                 </div>
@@ -497,12 +508,12 @@
                                                 <td style="width: 100px; text-align: center;">0/1</td>
                                             </tr>
                                         </tbody>
-                        
+
                                         <!-- Major Electives Section -->
                                         <tr>
                                             <th colspan="2" class="text-center">IS Major Electives: 0/6 CUs</th>
                                         </tr>
-                        
+
                                         <!-- Free Electives Section -->
                                         <tr>
                                             <th colspan="2" class="text-center">Free Electives: 3/6 CUs</th>
@@ -514,101 +525,103 @@
                     </div>
 
                     <div class="timetable-section" id="timetable-section">
-                    <div class="mb-2 row">
-                        <h2 class="col-2 ms-2">My Timetable</h2>
-                        <button class="btn btn-outline-primary col-2 align-center" onClick="location.href='homepage(nextSemester).html#timetable-section'">Next Semester Forecast</button>
+                        <div class="mb-2 row">
+                            <h2 class="col-2 ms-2">My Timetable</h2>
+                            <button class="btn btn-outline-primary col-2 align-center"
+                                onClick="location.href='homepage(nextSemester).html#timetable-section'">Next Semester
+                                Forecast</button>
+                        </div>
+                        <table class="timetable">
+                            <tr>
+                                <th>Time</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                            </tr>
+                            <tr>
+                                <td>08:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="highlighted" rowspan="3">IS210</td>
+                                <td class="highlighted" rowspan="3">COR-IS1702</td>
+                            </tr>
+                            <tr>
+                                <td>09:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="highlighted" rowspan="3">IS216</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>15:00</td>
+                                <td></td>
+                                <td class="highlighted" rowspan="3">IS211</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>16:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>18:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
-                    <table class="timetable">
-                        <tr>
-                            <th>Time</th>
-                            <th>MON</th>
-                            <th>TUE</th>
-                            <th>WED</th>
-                            <th>THU</th>
-                            <th>FRI</th>
-                        </tr>
-                        <tr>
-                            <td>08:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="highlighted" rowspan="3">IS210</td>
-                            <td class="highlighted" rowspan="3">COR-IS1702</td>
-                        </tr>
-                        <tr>
-                            <td>09:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>10:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>11:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>12:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="highlighted" rowspan="3">IS216</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>13:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>14:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>15:00</td>
-                            <td></td>
-                            <td class="highlighted" rowspan="3">IS211</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>16:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>17:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>18:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
                 </div>
             </div>
         </div>
@@ -629,7 +642,7 @@
         });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const hash = window.location.hash;
         if (hash) {
             const element = document.querySelector(hash);
