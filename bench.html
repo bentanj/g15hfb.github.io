@@ -16,7 +16,7 @@
             <div class="col-lg-1">
                 <ul class="nav flex-column sticky-top text-center">
                     <button class="btn" style="height: 30px; visibility: hidden;"></button>
-                    <button class="btn btn-primary my-2" onClick="location.href = 'index.html'">
+                    <button class="btn btn-primary my-2" onClick="location.href = 'index2.html'">
                         <img src="img/homeicon.png" class="navicon">
                         <p class="mb-0">Home</p>
                     </button>
@@ -56,11 +56,12 @@
                                 <div class="row">
                                     <!-- Time Column -->
                                     <div class="col-2">
-                                        <div class="text-end" style="margin-top: 48px;">
-                                            <div style="height: 48px; line-height: 48px;">8:30</div>
-                                            <div style="height: 48px; line-height: 48px;">12:00</div>
-                                            <div style="height: 48px; line-height: 48px;">15:30</div>
-                                            <div style="height: 48px; line-height: 48px;">18:45</div>
+                                        <div class="text-end" style="margin-top: 12px;">
+                                            <div style="height: 50px; line-height: 45px;">8:30</div>
+                                            <div style="height: 50px; line-height: 45px;">12:00</div>
+                                            <div style="height: 50px; line-height: 55px;">15:30</div>
+                                            <div style="height: 50px; line-height: 60px;">18:45</div>
+                                            <div style="height: 50px; line-height: 65px;">22:00</div>
                                         </div>
                                     </div>
 
@@ -79,17 +80,8 @@
                                         <div class="row mt-2" id="timetableGrid">
                                             <div class="col">
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
-                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                                 <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
-                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS213</span>
-                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
-                                                </div>
-                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
-                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
-                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS442</span>
+                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS213 (G2)</span>
                                                     <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
                                                 </div>
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
@@ -98,19 +90,19 @@
                                             <div class="col">
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
-                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
-                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS215</span>
-                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
-                                                </div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                             </div>
                                             <div class="col">
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
-                                                <div class="border rounded mb-2 border-2 border-dark position-relative module-slot droppable" style="height: 48px;" draggable="true">
-                                                    <span class="ps-2 pt-2 d-inline-block" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 24px);">IS404</span>
-                                                    <button class="btn-close" style="position: absolute; right: 8px; top: 12px; font-size: 0.7em;"></button>
-                                                </div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                                <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                                 <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
                                             </div>
                                             <div class="col">
@@ -140,27 +132,33 @@
                                 <div class="row" id="benchGrid">
                                     <div class="col-12 col-sm-6 col-md bench-slot">
                                         <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
-                                            <span class="ps-2 pt-2 d-inline-block">CS103</span>
+                                            <span class="ps-2 pt-2 d-inline-block">CS103 (G2)</span>
                                             <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md bench-slot">
                                         <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
-                                            <span class="ps-2 pt-2 d-inline-block">STAT1202</span>
+                                            <span class="ps-2 pt-2 d-inline-block">STAT1202 (G1)</span>
                                             <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md bench-slot">
                                         <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
-                                            <span class="ps-2 pt-2 d-inline-block">IS214</span>
+                                            <span class="ps-2 pt-2 d-inline-block">IS214 (G3)</span>
                                             <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md bench-slot">
-                                        <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                        <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
+                                            <span class="ps-2 pt-2 d-inline-block">IS215 (G10)</span>
+                                            <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
+                                        </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md bench-slot">
-                                        <div class="border rounded mb-2 droppable" style="height: 48px;"></div>
+                                        <div class="border rounded mb-2 border-2 border-dark position-relative module-slot draggable" style="height: 48px;" draggable="true">
+                                            <span class="ps-2 pt-2 d-inline-block">IS404 (G2)</span>
+                                            <button class="btn-close float-end m-1" style="font-size: 0.7em;"></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
