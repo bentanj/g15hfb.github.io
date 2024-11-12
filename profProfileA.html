@@ -69,23 +69,56 @@
 
     /* Add animation (fade in the popup) */
     @-webkit-keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
 
     @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
 
-        to {
-            opacity: 1;
+    /* New styles for fixed layout */
+    @media (min-width: 992px) {
+        .right-sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 16.666667%;  /* Same as col-lg-2 */
+            height: 100vh;
+            overflow-y: auto;
+            background: white;
+            padding: 1rem;
+            border-left: 1px solid #dee2e6;
         }
+        
+        .main-content {
+            margin-right: 16.666667%;  /* Same as col-lg-2 */
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .right-sidebar {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #dee2e6;
+        }
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -174,28 +207,29 @@
                     }
                 </script>
 
-                <div class="container-fluid"> <!-- Videos-->
+                <div class="container-fluid">
                     <h2 class="display-5">Videos</h2>
                     <div class="row">
                         <div class="col-lg-6 my-4">
                             <h3>Professor Introduction Video</h3>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/KJ0NJUAj7w0?si=it-m-oyJohUHeGwg"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/KJ0NJUAj7w0?si=it-m-oyJohUHeGwg" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
                         </div>
                         <div class="col-lg-6 my-4">
                             <h3>Professor Demo Class Video</h3>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/C1j1x3xOCPM?si=SjJojL3ALBKmHXEQ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/C1j1x3xOCPM?si=SjJojL3ALBKmHXEQ" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="container-fluid"> <!-- Videos-->
                     <h2>Key Course Information</h2>
                     <hr>
@@ -268,11 +302,11 @@
             </div>
 
             <!-- Related Professors Section -->
-            <div class="col-lg-2 sticky-top text-center">
+            <div class="right-sidebar">
                 <h4>Other Professors Teaching This Course:</h4>
                 <!-- Professor Card -->
                 <div class="card text-center my-2">
-                    <img src="img/ben.jpg " class="card-img-top">
+                    <img src="img/ben.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Professor Benjamin Gan</h5>
                         <div class="card-text">
@@ -284,7 +318,7 @@
 
                 <!-- Professor Card -->
                 <div class="card text-center my-2">
-                    <img src="img/chris.jpg " class="card-img-top">
+                    <img src="img/chris.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5>Professor Chris Poskitt</h5>
                         <div class="card-text">
